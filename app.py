@@ -35,7 +35,7 @@ st.sidebar.text(f"차종 구분 (자동연동): {car_type}")
 
 # 기본 취득세율 자동 연동 (화물·승합 5%, 승용 7%)
 tax_rate = 0.05 if car_type in ["화물", "승합"] else 0.07
-st.sidebar.text(f"기본 취득세율: {tax_rate * 100}%")
+st.sidebar.text(f"기본 취득세율: {tax_rate * 100:.1f}%")
 
 auction_type = st.sidebar.selectbox(
     "경매 출품 거래 형태", ["법인(부가세 별도)", "법인(부가세 포함)", "개인(특례)"]
